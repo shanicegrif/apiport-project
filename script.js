@@ -20,6 +20,10 @@ button.addEventListener("click", (e) => {
     
 })
 
+function submitform() {
+    const form1 = document.querySelector(".form1")
+    const form2 = document.querySelector(".form2")
+}
 function getCharacter(json) {
     characterInfo.innerHTML = `
     <article>
