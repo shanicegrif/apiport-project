@@ -77,14 +77,30 @@ function submitform() {
     }
 }
 
-function printCharacter(json) {
+function printCharacter(character) {
     characterInfo.innerHTML = `
     <article>
-        <img src="${json.image}" alt="${json.name}"/>
-        <h2>Name: ${json.name}</h2>
-        <p>Gender: ${json.gender}</p>
-        <p>Origin: ${json.origin.name}</p>
-        <p>Status: ${json.status}</p>
+        <img src="${character.image}" alt="${character.name}"/>
+        <h2>Name: ${character.name}</h2>
+        <p>Gender: ${character.gender}</p>
+        <p>Origin: ${character.origin.name}</p>
+        <p>Status: ${character.status}</p>
     </article>
     `  
+}
+
+function filteredCharacters(characters) {
+    characterInfo.innerHTML = "";
+
+    characters.forEach(character => {
+        const article = document.createElement("article");
+        article.innerHTML = `
+            <img src="${character.image}" alt="${character.name}"/>
+            <h2>Name: ${character.name}</h2>
+            <p>Gender: ${character.gender}</p>
+            <p>Origin: ${character.origin.name}</p>
+            <p>Status: ${character.status}</p>
+        `;
+        characterInfo.appendChild(article);
+    });
 }
