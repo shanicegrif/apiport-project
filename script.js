@@ -10,6 +10,12 @@ const button = document.querySelector("button");
 button.addEventListener("click", (e) => {
     e.preventDefault();
     console.log("firing click");
+    
+    const id = characterId.value;
+    const name = characterName.value;
+    const selectedStatus = status.value;
+
+    console.log(id);
 
     const isForm1Filled = Array.from(document.querySelector(".form1").elements).some(function(element) {
         return element.value !== "";
@@ -19,10 +25,6 @@ button.addEventListener("click", (e) => {
         return element.value !== "";
     });
 
-    const id = characterId.value;
-    const name = characterName.value;
-    const selectedStatus = status.value;
-
     if (isForm1Filled && isForm2Filled) {
         alert("Only fill one form!");
         
@@ -30,13 +32,7 @@ button.addEventListener("click", (e) => {
         if (id) {
             fetch(`${apiUrl}/${id}`)
             .then(data => data.json())
-            .then(json => {
-                if(json.error === 0) {
-                    characterInfo.innerHTML = "<p> No character found. </p>";
-                } else {
-                    printCharacter(json.results);
-                }
-            })
+            .then(json => printCharacter(json))
             .catch(err => alert("Something went wrong.", err));
         }
 
