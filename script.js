@@ -2,7 +2,7 @@ const apiUrl = "https://rickandmortyapi.com/api/character"
 
 const characterId = document.querySelector(".characterId");
 const characterName = document.querySelector(".characterName");
-const container = document.querySelector(".resultContainer");
+const characterInfo = document.querySelector(".characterInfo");
 const button = document.querySelector("button");
 
 button.addEventListener("click", (e) => {
@@ -21,9 +21,9 @@ button.addEventListener("click", (e) => {
 })
 
 function getCharacter(json) {
-    container.innerHTML = `
+    characterInfo.innerHTML = `
     <article>
-        <img scr="${json.image}" alt="${json.name}"/>
+        <img src="${json.image}" alt="${json.name}"/>
         <h2>Name: ${json.name}</h2>
         <p>Gender: ${json.gender}</p>
         <p>Origin: ${json.origin.name}</p>
