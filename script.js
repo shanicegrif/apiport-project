@@ -9,8 +9,9 @@ const button = document.querySelector("button");
 button.addEventListener("click", (e) => {
     e.preventDefault();
     console.log("firing click");
+
     const id = characterId.value;
-    const name =  characterName.value;
+    const name = characterName.value;
     const selectedStatus = e.target.status.value;
 
     if(selectedStatus || name) {
@@ -25,18 +26,33 @@ button.addEventListener("click", (e) => {
         }
 
         url = url.slice(0, -1);
+
+        fetch(url)
+        .then(data => data.json())
+        .then(json => {
+            if(json.results.length === 0) {
+                characterInfo.innerHTML = "<p>No characters found.</p>"
+            } else {
+                filteredCharacters(json.results);
+            }
+        })
+        .catch(err => alert("Something went wrong.", err));
+
     } else if (id) {
         fetch(`${apiUrl}/${id}`)
         .then(data => data.json())
         .then(json => {
-            getCharacter(json);
+            if(json.error === 0) {
+                characterInfo.innerHTML = "<p> No character found. </p>";
+            } else {
+                printCharacter(json.results);
+            }
         })
         .catch(err => alert("Something went wrong.", err));
+    } else {
+        alert("Please fill out one of the forms!")
     }
-
-
-    
-})
+});
 
 function submitform() {
     const form1 = document.querySelector(".form1");
@@ -61,7 +77,7 @@ function submitform() {
     }
 }
 
-function getCharacter(json) {
+function printCharacter(json) {
     characterInfo.innerHTML = `
     <article>
         <img src="${json.image}" alt="${json.name}"/>
