@@ -21,9 +21,28 @@ button.addEventListener("click", (e) => {
 })
 
 function submitform() {
-    const form1 = document.querySelector(".form1")
-    const form2 = document.querySelector(".form2")
+    const form1 = document.querySelector(".form1");
+    const form2 = document.querySelector(".form2");
+
+    const isForm1Filled = Array.from(form1.elements).some(function(element) {
+        return element.value !== "";
+    });
+
+    const isForm2Filled =Array.from(form2.elements).some(function(element) {
+        return element.value !== "";
+    });
+
+    if (isForm1Filled && isForm2Filled) {
+        alert("Only fill one form!");
+    } else if (isForm1Filled) {
+        form1.submit();
+    } else if (isForm2Filled) {
+        form2.submit();
+    } else {
+        alert("Please fill out one of the forms!")
+    }
 }
+
 function getCharacter(json) {
     characterInfo.innerHTML = `
     <article>
