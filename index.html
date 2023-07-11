@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Character Filter</title>
 </head>
 <body>
     <h1>Character Filter</h1>
-    <form id="filterForm">
-        <input type="number" id="characterId" placeholder="Enter Character ID">
-        <input type="text" id="characterName" placeholder="Enter Character Name">
+    <form class="filterForm">
+        <input type="number" class="characterId" placeholder="Enter Character ID">
+        <input type="text" class="characterName" placeholder="Enter Character Name">
         <button type="submit">Filter Character</button>
-        <div id="resultContainer"></div>
+        <div class="resultContainer">
+            <a href="./character.html">Character Info</a>
+        </div>
     </form>
 </body>
 </html>

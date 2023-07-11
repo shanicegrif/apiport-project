@@ -1,14 +1,33 @@
-const apiUrl = "https://rickandmortyapi.com/api/character/[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]"
+const apiUrl = "https://rickandmortyapi.com/api/character"
 
-const characterId = document.getElementById('characterId');
-const characterName = document.getElementById('characterName');
-const submitButton = document.querySelector('button')
+const characterId = document.querySelector(".characterId");
+const characterName = document.querySelector(".characterName");
+const container = document.querySelector(".resultContainer");
+const button = document.querySelector("button");
 
-submitButton.addEventListener("click", (e) => {
+button.addEventListener("click", (e) => {
     e.preventDefault();
     console.log("firing click");
+    const id = characterId.value;
 
-    fetch(apiUrl)
+    fetch(`${apiUrl}/${id}`)
     .then(data => data.json())
-    .then(json => console.log(json))
+    .then(json => {
+        getCharacter(json);
+    })
+    .catch(err => alert("Something went wrong.", err));
+
+    
 })
+
+function getCharacter(json) {
+    container.innerHTML = `
+    <article>
+        <img scr="${json.image}" alt="${json.name}"/>
+        <h2>Name: ${json.name}</h2>
+        <p>Gender: ${json.gender}</p>
+        <p>Origin: ${json.origin.name}</p>
+        <p>Status: ${json.status}</p>
+    </article>
+    `  
+}
