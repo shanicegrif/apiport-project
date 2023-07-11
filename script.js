@@ -1,7 +1,8 @@
 const apiUrl = "https://rickandmortyapi.com/api/character"
 
-const characterId = document.querySelector(".characterId");
-const characterName = document.querySelector(".characterName");
+const characterId = document.querySelector("#characterId");
+const characterName = document.querySelector("#characterName");
+const status = document.querySelector("status");
 const characterInfo = document.querySelector(".characterInfo");
 const button = document.querySelector("button");
 
@@ -9,13 +10,30 @@ button.addEventListener("click", (e) => {
     e.preventDefault();
     console.log("firing click");
     const id = characterId.value;
+    const name =  characterName.value;
+    const selectedStatus = e.target.status.value;
 
-    fetch(`${apiUrl}/${id}`)
-    .then(data => data.json())
-    .then(json => {
-        getCharacter(json);
-    })
-    .catch(err => alert("Something went wrong.", err));
+    if(selectedStatus || name) {
+        let url = `${apiUrl}/?`;
+
+        if(name) {
+            url += `name=${name}&`;
+        }
+
+        if(selectedStatus) {
+            url += `status=${selectedStatus}&`
+        }
+
+        url = url.slice(0, -1);
+    } else if (id) {
+        fetch(`${apiUrl}/${id}`)
+        .then(data => data.json())
+        .then(json => {
+            getCharacter(json);
+        })
+        .catch(err => alert("Something went wrong.", err));
+    }
+
 
     
 })
