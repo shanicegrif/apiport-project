@@ -2,7 +2,6 @@ const apiUrl = "https://rickandmortyapi.com/api/character"
 
 const characterId = document.querySelector(".characterId");
 const characterName = document.querySelector("input[name='characterName']");
-const status = document.querySelector("select");
 
 const characterInfo = document.querySelector(".characterInfo");
 const button = document.querySelector("button");
@@ -13,7 +12,7 @@ button.addEventListener("click", (e) => {
 
     const id = characterId.value;
     const name = characterName.value;
-    const selectedStatus = status.value;
+    const selectedStatus = document.querySelector("select").value;
 
     console.log(selectedStatus);
 
