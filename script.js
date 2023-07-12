@@ -6,10 +6,6 @@ const characterName = document.querySelector("input[name='characterName']");
 const characterInfo = document.querySelector(".characterInfo");
 const button = document.querySelector("button");
 
-const errorContainer = document.querySelector(".error-conatiner");
-const errorMessage = document.querySelector(".error-message");
-const errorButton = document.querySelector(".error-button");
-
 button.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -34,7 +30,7 @@ button.addEventListener("click", (e) => {
   if (isForm1Filled && isForm2Filled) {
     characterInfo.innerHTML = `
         <div class="error-container">
-            <p class"error-message">"Only fill one form!"<p>
+            <p class="error-message">"Only fill one form!"<p>
         </div>`;
   } else if (isForm1Filled) {
     if (id) {
@@ -63,7 +59,7 @@ button.addEventListener("click", (e) => {
   } else {
     characterInfo.innerHTML = `
         <div class="error-container">
-            <p class"error-message">"Please fill out one of the forms!<p>
+            <p class="error-message">"Please fill out one of the forms!"<p>
         </div>`;
     }
 });
