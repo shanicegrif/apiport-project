@@ -56,7 +56,6 @@ button.addEventListener("click", (e) => {
     } else {
         alert("Please fill out one of the forms!")
     }
-
 });
 
 function printCharacter(character) {
@@ -70,6 +69,7 @@ function printCharacter(character) {
         <p>Status: ${character.status}</p>
     </article>
     `  
+    document.querySelector(".form1").reset();
 }
 
 function filteredCharacters(characters) {
@@ -87,4 +87,6 @@ function filteredCharacters(characters) {
         `;
         characterInfo.appendChild(article);
     });
+
+    document.querySelector(".form2").reset();
 }
