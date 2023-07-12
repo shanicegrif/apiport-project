@@ -40,13 +40,33 @@ body {
     padding-bottom: 2.5rem;
 }
 
+.characterInfo {
+    padding-bottom: 5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+article {
+    text-align: center;
+}
+
+article img {
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
 footer {
     position: absolute;
     width: 100%;
     bottom: 0;
-    padding-top: 20px;
-    height: 2.5rem;
+    height: 5rem;
     text-align: center;
     color: aliceblue;
-    background-color: black;
+    background-image: url(./images/Screenshot\ 2023-07-11\ at\ 10.15.54\ PM.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }

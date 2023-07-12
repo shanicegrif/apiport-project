@@ -68,11 +68,6 @@ button.addEventListener("click", (e) => {
     }
 });
 
-errorButton.addEventListener("click", (e) => {
-    e.preventDefault()
-    errorContainer.style.display = "none";
-});
-
 function printCharacter(character) {
   characterInfo.innerHTML = `
     <article>
