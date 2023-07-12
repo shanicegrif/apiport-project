@@ -8,6 +8,18 @@ body {
     margin: 0;
 }
 
+a {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+a:hover, a:active{
+    font-size: 150%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .main-header {
     text-align: center;
     color: #10c42b;
