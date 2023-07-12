@@ -77,13 +77,12 @@ function printCharacter(character) {
   characterInfo.innerHTML = `
     <article>
         <img src="${character.image}" alt="${character.name}"/>
-        <h2>Name: ${character.name}</h2>
+        <h2>${character.name}</h2>
         <p>Gender: ${character.gender}</p>
         <p>Species: ${character.species}</p>
         <p>Origin: ${character.origin.name}</p>
         <p>Status: ${character.status}</p>
-    </article>
-    `;
+    </article>`;
   document.querySelector(".form1").reset();
 }
 
@@ -94,7 +93,7 @@ function filteredCharacters(characters) {
     const article = document.createElement("article");
     article.innerHTML = `
             <img src="${character.image}" alt="${character.name}"/>
-            <h2>Name: ${character.name}</h2>
+            <h2>${character.name}</h2>
             <p>Gender: ${character.gender}</p>
             <p>Species: ${character.species}</p>
             <p>Origin: ${character.origin.name}</p>
