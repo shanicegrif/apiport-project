@@ -50,6 +50,11 @@ body {
 .form {
     display: flex;
     justify-content: space-evenly;
+    gap: 20px;
+}
+
+button {
+    margin-top: 25px;
 }
 
 .content {
@@ -85,4 +90,18 @@ footer {
     background-image: url(./images/Screenshot\ 2023-07-11\ at\ 10.15.54\ PM.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+@media (max-width: 970px) {
+    .characterInfo{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 649px) {
+    .characterInfo{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
