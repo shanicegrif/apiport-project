@@ -65,6 +65,15 @@ button.addEventListener("click", (e) => {
 });
 
 function printCharacter(character) {
+  const statusColors = {
+    alive: "green",
+    dead: "red",
+    unknown: "purple",
+  };
+
+  const status = character.status.toLowerCase();
+  const statusColor = statusColors[status] || "black";
+
   characterInfo.innerHTML = `
     <article>
         <img src="${character.image}" alt="${character.name}"/>
@@ -72,15 +81,23 @@ function printCharacter(character) {
         <p>Gender: ${character.gender}</p>
         <p>Species: ${character.species}</p>
         <p>Origin: ${character.origin.name}</p>
-        <p>Status: ${character.status}</p>
+        <p>Status: <span style="color: ${statusColor};">${character.status}</span></p>
     </article>`;
   document.querySelector(".form1").reset();
 }
 
 function filteredCharacters(characters) {
   characterInfo.innerHTML = "";
-
+  const statusColors = {
+    alive: "green",
+    dead: "red",
+    unknown: "purple",
+  };
+  
   characters.forEach((character) => {
+    const status = character.status.toLowerCase();
+    const statusColor = statusColors[status] || "black";
+
     const article = document.createElement("article");
     article.innerHTML = `
             <img src="${character.image}" alt="${character.name}"/>
@@ -88,7 +105,7 @@ function filteredCharacters(characters) {
             <p>Gender: ${character.gender}</p>
             <p>Species: ${character.species}</p>
             <p>Origin: ${character.origin.name}</p>
-            <p>Status: ${character.status}</p>
+            <p>Status: <span style="color: ${statusColor};">${character.status}</span></p>
         `;
     characterInfo.appendChild(article);
   });
