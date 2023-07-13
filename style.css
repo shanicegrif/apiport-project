@@ -8,16 +8,28 @@ body {
     margin: 0;
 }
 
-a {
+.link-1 {
     display: flex;
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: #10c42b;
+    transition: background-color 0.5s;
+}
+
+.link-2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: pink;
+    transition: background-color 0.5s;
 }
 
 a:hover, a:active{
     font-size: 150%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(197, 169, 7);
 }
 
 .main-header {
