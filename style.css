@@ -66,11 +66,28 @@ a:hover, a:active{
 
 details {
 padding-left: 10px;
+padding-top: 20px;
 }
 
 .character-container {
     position: relative;
     min-height: 100vh;
+}
+
+.card-bio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(107, 84, 200);
 }
 
 .form {
@@ -84,7 +101,7 @@ button {
 }
 
 .content {
-    padding-bottom: 2.5rem;
+    padding-bottom: 5rem;
 }
 
 .characterInfo {
