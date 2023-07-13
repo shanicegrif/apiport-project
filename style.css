@@ -97,6 +97,7 @@ footer {
     width: 100%;
     bottom: 0;
     height: 5rem;
+    padding-top: 5px;
     text-align: center;
     color: aliceblue;
     background-image: url(./images/Screenshot\ 2023-07-11\ at\ 10.15.54\ PM.png);
