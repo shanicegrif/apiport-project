@@ -13,7 +13,6 @@ body {
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #10c42b;
     transition: background-color 0.5s;
 }
 
@@ -22,7 +21,6 @@ body {
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: pink;
     transition: background-color 0.5s;
 }
 
@@ -64,6 +62,10 @@ a:hover, a:active{
 .page-container {
     position: relative;
     min-height: 100vh;
+}
+
+details {
+padding-left: 10px;
 }
 
 .character-container {

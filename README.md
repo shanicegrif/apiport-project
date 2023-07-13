@@ -14,3 +14,4 @@ This project uses a Ricky and Morty api, that has a total of 826 characters sort
 There are some special features to the name section of the second form. This part of the form will filter through the character based on the partcial name inputed by the user. It will then return all the charcters who name includes that sub-text.
 
 ### Stretch Goals:
+- Used some transition on :hover selector of the two links that are shown on each page.
