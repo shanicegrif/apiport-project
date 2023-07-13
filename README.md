@@ -1,7 +1,7 @@
 # Api Profolio Project
-This project uses a Ricky and Morty api.
+This project uses a Ricky and Morty api, that has a total of 826 characters sorted by their id. Each one of the character objects includes information on that character existance within the show such as name gender, origin, episodes they appeared in and so on. However, this project only utilizes 3 different aspects of that object and return that character(s) for the user to see.
 
-[Rick and Morty Character Universe](https://shanicegrif.github.io/apiport-project/) (take a look at the page)
+[Rick and Morty Character Universe](https://shanicegrif.github.io/apiport-project/) (Take a look at the page.)
 ---
 
 ### *Form Instructions:*
