@@ -6,7 +6,7 @@ body {
 }
 
 .character-body{
-    background-color: pink;
+    background-color: rgb(245, 162, 176);
     margin: 0;
 }
 
@@ -124,8 +124,13 @@ summary {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
+    border-radius: 32px;
     text-align: center;
     background-color: rgb(107, 84, 200);
+}
+
+.card img {
+    border-radius: 32px 32px 0px 0px;
 }
 
 .text-link {
