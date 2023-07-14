@@ -1,5 +1,5 @@
 # Api Profolio Project
-This project uses a Ricky and Morty api, that has a total of 826 characters sorted by their id. Each one of the character objects includes information on that character's existence within the show such as name, gender, origin, episodes they appeared in and so on. However, this project only utilizes 3 different aspects of that object and return that character(s) for the user to see.
+This project uses a Ricky and Morty api, that has a total of 826 characters sorted by their id. Each one of the character objects includes information on that character's existence within the show such as name, gender, origin, episodes they appeared in and so on. However, this project only utilizes 3 different aspects of that object and returns that character(s) for the user to see.
 
 [Rick and Morty Character Universe](https://shanicegrif.github.io/apiport-project/) (Take a look at the page.)
 ---
@@ -11,7 +11,7 @@ This project uses a Ricky and Morty api, that has a total of 826 characters sort
 - The result of the form will return character(s) information such as name, gender, species, origin, and living status.
 
 ### *Form Features:*
-There are some special features to the name section of the second form. This part of the form will filter through the character based on the partcial name inputed by the user. It will then return all the charcters who name includes that sub-text.
+There are also some special features to the name section of the second form. This part of the form will filter through the character based on the partial name or letter inputted by the user. It will then return all the characters whose name includes that subtext.
 
 ### Stretch Goals:
 - Used some transition on :hover selector of the two links that are shown on each page.
