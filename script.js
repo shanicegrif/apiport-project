@@ -9,6 +9,8 @@ const button = document.querySelector("button");
 button.addEventListener("click", (e) => {
   e.preventDefault();
 
+  characterInfo.innerHTML = "";
+
   const id = characterId.value;
   const name = characterName.value;
   const selectedStatus = document.querySelector("select").value;
@@ -61,7 +63,10 @@ button.addEventListener("click", (e) => {
         <div class="error-container">
             <p class="error-message">"Please fill out one of the forms!"<p>
         </div>`;
-    }
+  }
+
+  document.querySelector(".form1").reset();
+  document.querySelector(".form2").reset();
 });
 
 function printCharacter(character) {
