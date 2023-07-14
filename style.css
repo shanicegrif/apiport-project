@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Great+Vibes&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Great+Vibes&family=Kaushan+Script&family=Satisfy&display=swap');
 
 body {
     background-color: #10c42b;
@@ -27,14 +27,14 @@ body {
 }
 
 a{
-    font-size: 20px;
+    font-size: 25px;
 }
 
 a:hover, a:active{
     font-size: 150%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Kaushan Script', cursive;
     color: white;
-    background-color: rgb(197, 169, 7);
+    background-color: gold;
 }
 
 .main-header {
@@ -90,7 +90,7 @@ details img {
 
 summary {
     font-size: 24px;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Kaushan Script', cursive;
 }
 
 .sum {
