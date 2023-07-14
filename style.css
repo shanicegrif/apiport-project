@@ -24,9 +24,14 @@ body {
     transition: background-color 0.5s;
 }
 
+a{
+    font-size: 20px;
+}
+
 a:hover, a:active{
     font-size: 150%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
     background-color: rgb(197, 169, 7);
 }
 
@@ -65,13 +70,30 @@ a:hover, a:active{
 }
 
 details {
-padding-left: 10px;
-padding-top: 20px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-right: 10px;
+    cursor: context-menu;
+}
+
+details img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-info {
+    cursor: help;
 }
 
 .character-container {
     position: relative;
     min-height: 100vh;
+}
+
+.card-title {
+    text-align: center;
+    text-decoration: underline;
 }
 
 .card-bio {
