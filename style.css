@@ -160,7 +160,7 @@ button {
     padding-right: 10px;
     padding-top: 30px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1em;
 }
 
@@ -184,6 +184,13 @@ footer {
     background-image: url(./images/Screenshot\ 2023-07-11\ at\ 10.15.54\ PM.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+@media (max-width: 1293px) {
+    .characterInfo{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 970px) {
