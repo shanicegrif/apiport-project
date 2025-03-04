@@ -5,18 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Home of Rick and Morty Universe</title>
+    <title>Rick and Morty Universe</title>
   </head>
-  <body> 
+  <body class="index-body"> 
     <div class="main-header">
         <h1>RICKY AND MORTY CHARACTER UNIVERSE</h1>
     </div>
-    <div class="page-container">
+    <main class="container">
+      <header class="navbar">
+        <h1>Rick and Morty Universe</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="character.html">Characters</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="hero">
+        <h2>Welcome to the Rick and Morty Universe</h2>
+        <p>Join the misadventures of Rick Sanchez and his grandson Morty as they travel across dimensions, encounter strange beings, and navigate the chaos of the multiverse.</p>
+        <img src="rick-morty-hero.jpg" alt="Rick and Morty" class="hero-image">
+      </section>
+      <section class="show-summary">
+          <h2>About the Show</h2>
+          <p><strong>Rick and Morty</strong> is an animated sci-fi sitcom following the exploits of an eccentric, alcoholic scientist and his easily distressed grandson. The show explores themes of existentialism, family dysfunction, and the bizarre nature of alternate realities.</p>
+      </section>
         <div class="content">
           <details>
             <summary>Rick and Morty Show Summary</summary>
-            <img class="pic-mort" src="https://helios-i.mashable.com/imagery/articles/02ECFkvX2rDslH0mE5qXQGn/hero-image.fill.size_1248x702.v1662140236.png" alt="Rick and Morty Family" width="400px" height="200px"> 
-            <p class="sum">This show follows the misadventures of an alcoholic scientist Rick and his nervous grandson Morty. If they aren't home with their family causing mayhem, then they are on one of their many intergalactic travel adventures doing so.</p>
+              <img class="pic-mort" src="https://helios-i.mashable.com/imagery/articles/02ECFkvX2rDslH0mE5qXQGn/hero-image.fill.size_1248x702.v1662140236.png" alt="Rick and Morty Family" width="400px" height="200px"> 
+              <p class="sum">This show follows the misadventures of an alcoholic scientist Rick and his nervous grandson Morty. If they aren't home with their family causing mayhem, then they are on one of their many intergalactic travel adventures doing so.</p>
           </details>
           <details>
             <summary>Understanding the Rick and Morty Universe</summary>
@@ -24,41 +42,71 @@
             <p class="sum">The world that these two characters occupy is a part of a multiverse. This means there are an infinite number of universes with copies of themselves that exist in time, all of whom are different. However, in some way this duo and all that exist of them seem to be the center of everything as seen through the creation of the Citadel. However, along the way they bump into many other characters that aren't themselves.</p>
           </details>
           <div class="char-uni">
-          <h2 class="card-title">Main Characters</h2>
+            <h2 class="card-title">Main Characters</h2>
           </div>
           <div class="card-bio">
             <div class="card">
-              <img src="https://static.independent.co.uk/2022/09/06/10/newFile-1.jpg" alt="Rick" width="100%">
-              <h3>Rick Sanchez</h3>
-              <p class="bio">A brilliant but boozy scientist, he needs some help on his many adventures so he needs a companion. He takes his grandson on his many adventures between different dimensions.</p>
+              <div class="card-inner">
+                  <div class="card-front">
+                    <img src="https://static.independent.co.uk/2022/09/06/10/newFile-1.jpg" alt="Rick" width="100%">
+                  </div>
+                  <div class="card-back">
+                    <h3>Rick Sanchez</h3>
+                    <p>A brilliant but boozy scientist who takes his grandson Morty on interdimensional adventures.</p>
+                  </div>
+              </div>
             </div>
             <div class="card">
-              <img src="https://i.pinimg.com/originals/d8/94/61/d89461f769c38ce8e257c33ede767f5f.png" alt="Morty" width="100%">
-              <h3>Morty Smith</h3>
-              <p class="bio">Rick's grandson, he is in high school and whilst trying to pass his classes (especially maths with Mr. Goldenfold) Rick is always taking him out of class to help him out on his adventures.</p>
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="https://i.pinimg.com/originals/d8/94/61/d89461f769c38ce8e257c33ede767f5f.png" alt="Morty Smith" />
+                </div>
+                <div class="card-back">
+                  <h3>Morty Smith</h3>
+                  <p>Rick's grandson, he is in high school and whilst trying to pass his classes (especially maths with Mr. Goldenfold) Rick is always taking him out of class to help him out on his adventures.</p>
+                </div>
+              </div>
             </div>
             <div class="card">
-              <img src="https://www.looper.com/img/gallery/why-beth-is-the-most-disturbed-character-on-rick-and-morty/intro-1567089408.jpg" alt="Beth" width="100%">
-              <h3>Beth Sanchez</h3>
-              <p class="bio">Rick's daughter, he left her and his wife when she was a child and only came back 20 years later. Beth has abandonment issues due to this and she is terrified of her father leaving again. She is the father of Morty and Summer and the wife of Jerry.</p>
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="https://www.looper.com/img/gallery/why-beth-is-the-most-disturbed-character-on-rick-and-morty/intro-1567089408.jpg"  alt="Beth Sanchez" />
+                </div>
+                <div class="card-back">
+                  <h3>Beth Sanchez</h3>
+                  <p>Rick's daughter, he left her and his wife when she was a child and only came back 20 years later. Beth has abandonment issues due to this and she is terrified of her father leaving again. She is the father of Morty and Summer and the wife of Jerry.</p>
+                </div>
+              </div>
             </div>
             <div class="card">
-              <img src="https://decider.com/wp-content/uploads/2017/08/rick-and-morty-s3-ep5.jpg" alt="Jerry" width="100%">
-              <h3>Jerry Smith</h3>
-              <p class="bio">The very scared husband of Beth, father of Morty and Summer, he is a very timid guy and is scared of almost everything. He doesn't appreciate Rick after leaving Beth and for taking Morty on “high-tech sci-fi-rigmarole”.</p>
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="https://decider.com/wp-content/uploads/2017/08/rick-and-morty-s3-ep5.jpg" alt="Jerry Smith" />
+                </div>
+                <div class="card-back">
+                  <h3>Jerry Smith</h3>
+                  <p>The very scared husband of Beth, father of Morty and Summer, he is a very timid guy and is scared of almost everything. He doesn't appreciate Rick after leaving Beth and for taking Morty on “high-tech sci-fi-rigmarole”.</p>
+                </div>
+              </div>
             </div>
             <div class="card">
-              <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/08/Summer-in-Rick-and-Morty.jpg" alt="Summer" width="100%">
-              <h3>Summer Smith</h3>
-              <p class="bio">Morty's sister and the daughter of Beth and Jerry, she always tries to prove herself as a good companion to Rick so she'll be invited more but is actually quite an emotional teenager at heart. She cried when the Devil fired her from the business she helped him create.</p>
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/08/Summer-in-Rick-and-Morty.jpg" alt="Summer Smith" />
+                </div>
+                <div class="card-back">
+                  <h3>Summer Smith</h3>
+                  <p>Morty's sister and the daughter of Beth and Jerry, she always tries to prove herself as a good companion to Rick so she'll be invited more but is actually quite an emotional teenager at heart. She cried when the Devil fired her from the business she helped him create.</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <p class="text-link">This is only the show's main characters and in an interdimensional reality as crazy and wild as Rick and Morty, it can be hard to keep all of the characters straight. But you can have a further look into the many characters that exist within this crazy world. Just go to the Character Guide link that is down below.</p>
-          <div class="link-1">
-            <a href="./character.html">CHARACTER GUIDE</a>
           </div>
         </div>
-        <footer>© 2013 Rick and Morty, LLC.</footer>
-    </div>
+            <p class="text-link">This is only the show's main characters and in an interdimensional reality as crazy and wild as Rick and Morty, it can be hard to keep all of the characters straight. But you can have a further look into the many characters that exist within this crazy world. Just go to the Character Guide link that is down below.</p>
+            <div class="link-1">
+              <a href="./character.html">CHARACTER GUIDE</a>
+            </div>
+      </main>
+    <footer>© 2025 Rick and Morty Universe</footer>
   </body>
 </html>

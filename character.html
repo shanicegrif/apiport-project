@@ -11,33 +11,35 @@
     <div class="character-header">
       <h1>Character Guide</h1>
     </div>
-    <div class="link-2">
-      <a href="./index.html">HOME</a>
-    </div>
-    <details class="form-info">
-      <summary>Form Instructions</summary>
-      <p class="sum">There are two separate forms that are on the Character Guide page. However, you are only allowed to submit one of the forms. The first form will search for a single character by their id. The second form will filter through the characters either by their name, living status or both criteria. This may return multiple characters. The result of the form will return character(s) information such as name, gender, species, origin, and living status. There are also some special features to the name section of the second form. This part of the form will filter through the character based on the partial name or letter inputted by the user. It will then return all the characters whose name includes that subtext.</p>
-    </details>
-    <div class="character-container">
-      <div class="form">
-        <form class="form1">
-          <p>Enter Id Number</p>
-          <input type="number" class="characterId" name="id" placeholder="Enter Character ID" />
-        </form>
-        <p>OR</p>
-        <form class="form2">
-          <p>Enter Name</p>
-          <input type="text" name="characterName" placeholder="Enter Character Name" />
-          <select name="status" id="status">
-            <option value="">--Select Living Status--</option>
-            <option value="alive">alive</option>
-            <option value="dead">dead</option>
-            <option value="unknown">unknown</option>
-          </select>
-        </form>
-        <button type="submit">Submit</button>
+    <main class="container">
+      <div class="link-2">
+        <a href="./index.html">HOME</a>
       </div>
-      <div class="characterInfo"></div>
+      <details class="form-info">
+        <summary>Form Instructions</summary>
+        <p class="sum">There are two separate forms that are on the Character Guide page. However, you are only allowed to submit one of the forms. The first form will search for a single character by their id. The second form will filter through the characters either by their name, living status or both criteria. This may return multiple characters. The result of the form will return character(s) information such as name, gender, species, origin, and living status. There are also some special features to the name section of the second form. This part of the form will filter through the character based on the partial name or letter inputted by the user. It will then return all the characters whose name includes that subtext.</p>
+      </details>
+      <div class="character-container">
+        <div class="form">
+          <form class="form1">
+            <p>Enter Id Number</p>
+            <input type="number" class="characterId" name="id" placeholder="Enter Character ID" />
+          </form>
+          <p>OR</p>
+          <form class="form2">
+            <p>Enter Name</p>
+            <input type="text" name="characterName" placeholder="Enter Character Name" />
+            <select name="status" id="status">
+              <option value="">--Select Living Status--</option>
+              <option value="alive">alive</option>
+              <option value="dead">dead</option>
+              <option value="unknown">unknown</option>
+            </select>
+          </form>
+          <button type="submit">Submit</button>
+        </div>
+        <div class="characterInfo"></div>
+    </main>
       <footer>© 2013 Rick and Morty, LLC.</footer>
     </div>
   </body>
