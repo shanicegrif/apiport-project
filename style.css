@@ -6,7 +6,7 @@ html {
   padding: 0;
   width: 100%;
 }
-
+/* Index Css*/
 .index-body {
   background-color: #10c42b;
 }
@@ -54,6 +54,79 @@ a:active {
   font-family: "Caveat", cursive;
   font-size: 25px;
 }
+
+.character-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .card-title {
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  .card-bio {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center align */
+      gap: 20px; /* Space between cards */
+      padding: 10px;
+    }
+  
+  .card {
+    perspective: 500px;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image fills the space without distortion */
+      border-radius: 15px; /* Keep a uniform border radius */
+    }
+  
+  .card-back {
+    background-color: rgb(245, 162, 176);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+/* Character Css*/
 .character-header {
   background-image: url(./images/5196310.png);
   background-repeat: no-repeat;
@@ -66,14 +139,18 @@ a:active {
 }
 
 .error-container {
-  border: 3px solid rebeccapurple;
-  margin-top: 25px;
-  padding: 15px;
+    display: none; /* Hide by default */
+    border: 3px solid crimson; /* Border appears when active */
+    background-color: rgba(220, 20, 60, 0.1); /* Light background */
+    color: crimson;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.error-message {
-  color: crimson;
-  text-align: center;
+.error-container.active {
+    display: block; /* Show when active */
 }
 
 .page-container {
@@ -106,80 +183,6 @@ summary {
 
 .form-info {
   cursor: help;
-}
-
-.character-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-.card-title {
-  text-align: center;
-  text-decoration: underline;
-}
-
-.card-bio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  perspective: 500px;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  margin: auto;
-}
-
-.card-inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.card:hover .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card-front {
-  background-color: rgb(107, 84, 200);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-front img {
-  width: 100%;
-  border-radius: 32px 32px 0px 0px;
-}
-
-.card-back {
-  background-color: rgb(245, 162, 176);
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 15px;
-}
-
-.card img {
-  border-radius: 32px 32px 0px 0px;
 }
 
 .text-link {
@@ -218,8 +221,9 @@ article {
 }
 
 article img {
-  border-radius: 50%;
-  border: 2px solid black;
+    width: 150px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
 }
 
 footer {
